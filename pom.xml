@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>vn.hmc</groupId>
+    <artifactId>ToeicOnline</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>toeic-web-logic</module>
+        <module>toeic-web</module>
+        <module>toeic-core-dto</module>
+        <module>toeic-core-dao</module>
+        <module>toeic-core-dao-impl</module>
+        <module>toeic-core-service</module>
+        <module>toeic-core-service-impl</module>
+        <module>toeic-core-utils</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <!-- fix warning utf-8 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- servlet,jsp -->
+        <servlet.api.service>3.1.0</servlet.api.service>
+        <jsp.api.service>2.3.1</jsp.api.service>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.api.service}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>${jsp.api.service}</version>
+        </dependency>
+    </dependencies>
+
+</project>
